@@ -1,0 +1,16 @@
+@use 'src/assets/styles/base';
+@import 'src/assets/styles/extends';
+
+.header_container {
+  @extend %base-flex;
+  height: map-get(base.$app_height, header);
+
+  .header_content {
+    @extend %base-flex;
+
+    h1[data-label='главный заголовок'] {
+        text-transform: capitalize;
+        color: white;
+    }
+  }
+}

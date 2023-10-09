@@ -1,0 +1,26 @@
+@import 'src/assets/styles/extends';
+
+.personal_container {
+  @extend %base-flex;
+  grid-area: pic;
+
+  .personal_content {
+    @extend %base-flex;
+    position: relative;
+
+    .personal_pic {
+      border: none;
+      border-radius: 20px;
+    }
+
+    .personal_info {
+      @extend %base-flex;
+      flex-direction: column;
+      position: absolute;
+      bottom: 10px;
+      text-transform: capitalize;
+      font-weight: bolder;
+      color: white;
+    }
+  }
+}

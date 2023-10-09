@@ -1,0 +1,10 @@
+@import 'src/assets/styles/extends';
+
+
+.card_container {
+  @extend %base-flex;
+
+  .card_content {
+    @extend %base-flex;
+  }
+}

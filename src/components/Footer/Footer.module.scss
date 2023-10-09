@@ -1,0 +1,11 @@
+@use 'src/assets/styles/base';
+@import 'src/assets/styles/extends';
+
+.footer_container {
+  @extend %base-flex;
+  height: map-get(base.$app_height, footer);
+
+  .footer_content {
+    @extend %base-flex;
+  }
+}
