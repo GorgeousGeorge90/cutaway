@@ -7,5 +7,28 @@
 
   .footer_content {
     @extend %base-flex;
+
+    .footer_links {
+      @extend %base-flex;
+      gap:10px;
+      text-transform: capitalize;
+      color: #eeeeee;
+
+      a {
+        @extend %base-flex;
+
+        :hover {
+          fill: #FF8630;
+          animation: 2s pulse linear infinite;
+        }
+      }
+    }
   }
+}
+
+@keyframes pulse {
+  0% { opacity: 1 }
+  50% { opacity: 0.7 }
+  75% { opacity: 0.5 }
+  100% { opacity: 1 }
 }

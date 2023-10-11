@@ -6,5 +6,43 @@
 
   .card_content {
     @extend %base-flex;
+    flex-direction: column;
+
+    .card_logo {
+      @extend %base-flex;
+      position: relative;
+
+      .card_logo_img {
+        object-fit: fill;
+        width: 350px;
+        height: 200px;
+      }
+
+      .card_logo_title {
+        position: absolute;
+        bottom: 10px;
+      }
+    }
+
+    .card_description {
+      font-size: 0.9em;
+    }
+
+    .card_stack {
+      display: flex;
+      gap:10px;
+    }
+
+    .card_label {
+      display: flex;
+      gap:5px;
+
+      .card_label_link {
+        text-decoration: none;
+        color:#eeeeee;
+        font-weight: bolder;
+        font-style: italic;
+      }
+    }
   }
 }

@@ -1,0 +1,20 @@
+@import 'src/assets/styles/extends';
+
+.slider_container {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  grid-area: project;
+  color:white;
+
+  .slider_content {
+    display: flex;
+    align-items: center;
+
+    .slider_btn {
+      height: 40px;
+      cursor: pointer;
+      fill: white;
+    }
+  }
+}

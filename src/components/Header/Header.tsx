@@ -5,12 +5,16 @@ import { useEffect } from "react";
 export const Header = () => {
     useEffect(()=> {
         const content = document.body.querySelector('#content')
+        const child = content?.querySelector("h1")
 
-        utils.typing(
-            'junior frontend developer landing page',
-            content,
-            'главный заголовок'
-        )
+
+        if (!child) {
+            utils.typing(
+                'junior frontend developer landing page',
+                content,
+                'главный заголовок'
+            )
+        }
     },)
 
     return (<header className={styles.header_container}>

@@ -1,11 +1,12 @@
 import styles from './Personal.module.scss';
+import avatar from './../../assets/img/ava.jpg';
 
 export const Personal = () => {
 
     return (<section className={styles.personal_container}>
             <figure className={styles.personal_content}>
                 <img className={styles.personal_pic}
-                    src={'https://avatars.githubusercontent.com/u/81562716?v=4'}
+                    src={avatar}
                     alt='pic'
                 />
                 <figcaption className={styles.personal_info}>

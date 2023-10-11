@@ -8,9 +8,16 @@
   .bio_content {
     @extend %base-flex;
     flex-direction: column;
+    gap:5px;
 
     .bio_title {
       text-transform: capitalize;
+      animation: 1s enter linear;
+    }
+
+    .bio_title + p {
+      padding: 0 50px;
+      animation: 2s show ease-in-out;
     }
 
     .bio_table {
@@ -28,3 +35,16 @@
     }
   }
 }
+
+
+@keyframes enter {
+  30% { letter-spacing: 16px }
+  85% { letter-spacing: 1px }
+}
+
+@keyframes show {
+  0% { transform: scale(0) }
+  100% { transform: scale(1)}
+}
+
+

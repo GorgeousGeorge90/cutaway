@@ -3,6 +3,7 @@
 .personal_container {
   @extend %base-flex;
   grid-area: pic;
+  animation: 3s open;
 
   .personal_content {
     @extend %base-flex;
@@ -11,6 +12,7 @@
     .personal_pic {
       border: none;
       border-radius: 20px;
+      max-width: 500px;
     }
 
     .personal_info {
@@ -21,6 +23,31 @@
       text-transform: capitalize;
       font-weight: bolder;
       color: white;
+
+      h3 {
+        animation: 1s left;
+      }
+
+      p {
+        animation: 1s right;
+      }
     }
   }
 }
+
+@keyframes open {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+@keyframes left {
+  from { transform:translateX(-150px) }
+  to { transform:translateY(0) }
+}
+
+@keyframes right {
+  from { transform:translateX(150px) }
+  to { transform:translateY(0) }
+}
+
+
