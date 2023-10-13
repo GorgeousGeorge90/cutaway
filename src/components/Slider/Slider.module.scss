@@ -24,3 +24,9 @@
 
   }
 }
+
+@media (max-width: 450px) {
+  .slider_container .slider_content {
+    max-width: 400px;
+  }
+}

@@ -89,3 +89,14 @@
     flex-direction: column;
   }
 }
+
+
+@media (max-width: 450px) {
+  .card_container .card_content {
+    max-width: 350px;
+
+    .card_logo .card_logo_img {
+      transform: scale(0.8);
+    }
+  }
+}
