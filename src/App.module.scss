@@ -5,22 +5,18 @@
   @extend %base-flex;
   background-color: #181514;
   width: 100vw;
-  height: 100vh;
 
   .app_content {
     @extend %base-flex;
     flex-direction: column;
-    height: 100%;
     width: 100%;
     padding: 0 80px;
 
     .app_main {
-      display: grid;
-      grid-template-columns: repeat(2,1fr);
-      grid-template-rows: 250px 1fr;
-      grid-template-areas: 'pic bio'
-                           'pic project';
-      flex-grow: 1;
+      @extend %base-flex;
+      flex-direction: column;
+      gap:20px;
+      width: 100%;
     }
   }
 }

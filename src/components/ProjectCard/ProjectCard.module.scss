@@ -3,46 +3,89 @@
 
 .card_container {
   @extend %base-flex;
+  padding: 5px 0;
+  animation: slide;
 
   .card_content {
     @extend %base-flex;
-    flex-direction: column;
+    gap: 20px;
+    animation: slide;
 
     .card_logo {
       @extend %base-flex;
+      align-self: center;
       position: relative;
 
       .card_logo_img {
         object-fit: fill;
-        width: 350px;
+        max-width: 400px;
         height: 200px;
-      }
-
-      .card_logo_title {
-        position: absolute;
-        bottom: 10px;
+        border-radius: 10px;
+        box-shadow: 10px 5px 5px #3d2b1f;
       }
     }
 
-    .card_description {
-      font-size: 0.9em;
-    }
+    .card_info {
+      @extend %base-flex;
+      flex-direction: column;
+      max-width: 400px;
 
-    .card_stack {
-      display: flex;
-      gap:10px;
-    }
-
-    .card_label {
-      display: flex;
-      gap:5px;
-
-      .card_label_link {
-        text-decoration: none;
-        color:#eeeeee;
+      .card_info_title {
         font-weight: bolder;
-        font-style: italic;
+      }
+
+      .card_info_description {
+        @extend %base-flex;
+        text-align: center;
+        flex-direction: column;
+        gap: 5px;
+        width: 400px;
+
+      }
+
+      .card_info_stack {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        align-items: center;
+        justify-content: center;
+        padding: 10px 0;
+        gap: 10px;
+        list-style: none;
+
+        div {
+          align-self: start;
+        }
+
+        .card_stack_item {
+          font-style: italic;
+          font-weight: bolder;
+          color: #FF8630;
+        }
+      }
+
+      .card_info_label {
+        display: flex;
+        gap: 5px;
+
+        .card_info_label_link {
+          text-decoration: none;
+          color: #eeeeee;
+          font-weight: bolder;
+          font-style: italic;
+
+        }
       }
     }
+  }
+}
+
+@keyframes slide {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
+@media (max-width: 760px) {
+  .card_container .card_content {
+    flex-direction: column;
   }
 }

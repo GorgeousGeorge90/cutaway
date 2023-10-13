@@ -12,10 +12,11 @@ class ProjectsStore {
         makeAutoObservable(this)
     }
 
+
      fetchProjects() {
         this.pics = fromPromise(ApiServices.getPics())
         this.projects = fromPromise(ApiServices.getProjects())
-    }
+     }
 
 }
 

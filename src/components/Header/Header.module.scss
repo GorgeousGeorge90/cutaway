@@ -4,13 +4,12 @@
 .header_container {
   @extend %base-flex;
   height: map-get(base.$app_height, header);
+  color: #eeeeee;
 
   .header_content {
     @extend %base-flex;
-
-    h1[data-label='главный заголовок'] {
-        text-transform: capitalize;
-        color: white;
-    }
+    text-transform: capitalize;
+    flex-direction: column;
   }
 }
+

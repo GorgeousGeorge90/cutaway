@@ -12,9 +12,15 @@
     align-items: center;
 
     .slider_btn {
-      height: 40px;
       cursor: pointer;
       fill: white;
     }
+
+
+    svg[aria-label='прошлый проект'] {
+      transform: rotate(180deg);
+      height: 150%;
+    }
+
   }
 }

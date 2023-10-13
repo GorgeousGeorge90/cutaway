@@ -2,34 +2,75 @@
 
 .personal_container {
   @extend %base-flex;
-  grid-area: pic;
-  animation: 3s open;
+  color: #eeeeee;
 
   .personal_content {
     @extend %base-flex;
-    position: relative;
+    gap:40px;
+    width: 100%;
+    padding: 50px 100px 0 100px;
 
-    .personal_pic {
-      border: none;
-      border-radius: 20px;
-      max-width: 500px;
-    }
-
-    .personal_info {
+    .personal_logo {
       @extend %base-flex;
-      flex-direction: column;
-      position: absolute;
-      bottom: 10px;
-      text-transform: capitalize;
-      font-weight: bolder;
-      color: white;
+      position: relative;
+      animation: 2s open linear;
 
-      h3 {
-        animation: 1s left;
+      .personal_logo_img {
+        height: 350px;
+        width: 250px;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px #FF8630;
       }
 
-      p {
-        animation: 1s right;
+      .personal_logo_text {
+        @extend %base-flex;
+        flex-direction: column;
+        position: absolute;
+        bottom: 10px;
+        text-transform: capitalize;
+        font-weight: bolder;
+        color: white;
+        font-size: 0.8em;
+
+        h3 {
+          animation: 1s left ease-in-out;
+        }
+
+        p {
+          animation: 1s right ease-in-out;
+        }
+      }
+    }
+
+    .personal_motivation {
+      @extend %base-flex;
+      align-self: start;
+      flex-direction: column;
+      max-width: 500px;
+
+
+      .personal_motivation_title {
+        text-transform: capitalize;
+      }
+
+      .personal_motivation_text {
+        @extend %base-flex;
+        flex-direction: column;
+
+        .personal_motivation_text_list {
+          list-style-type: square;
+          font-weight: bolder;
+          color:#d8dfe5;
+
+          .personal_motivation_text_list_item {
+
+          }
+        }
+      }
+
+      .personal_motivation_text + p {
+        justify-self: center;
       }
     }
   }
@@ -50,4 +91,16 @@
   to { transform:translateY(0) }
 }
 
+@media (max-width: 760px) {
+  .personal_container .personal_content {
+    flex-direction: column;
+  }
+}
+
+
+@media (max-width: 560px) {
+  .personal_container .personal_content .personal_motivation {
+    min-width: 400px;
+  }
+}
 

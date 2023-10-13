@@ -1,0 +1,68 @@
+@import 'src/assets/styles/extends';
+
+.skills_container {
+  @extend %base-flex;
+  color:#eeeeee;
+
+  .skills_content {
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: 'title title'
+                          'base main';
+    align-items: center;
+    margin: 0 50px;
+    gap:20px;
+
+    .skills_title {
+      justify-self: center;
+      grid-area: title;
+      text-transform: capitalize;
+    }
+
+    .skills_base {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      grid-area: base;
+      width: 400px;
+      align-self: start;
+
+      p {
+        font-weight: bolder;
+      }
+
+      ul {
+        padding-left: 20px;
+      }
+    }
+
+    .skills_list {
+      grid-area: main;
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      gap:10px;
+      padding: 0;
+
+      .skills_list_item .skills_list_item_label {
+          font-weight: bold;
+        }
+
+      .skills_list_item .skills_list_item_progress {
+          display: flex;
+          height: 40px;
+          width: 400px;
+        }
+      }
+    }
+}
+
+@media (max-width: 860px) {
+    .skills_container .skills_content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+}

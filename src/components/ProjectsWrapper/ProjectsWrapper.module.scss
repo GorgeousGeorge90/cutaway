@@ -1,0 +1,55 @@
+@import 'src/assets/styles/extends';
+
+.wrapper_container {
+  @extend %base-flex;
+  min-height: 300px;
+
+  .wrapper_content {
+    @extend %base-flex;
+    flex-direction: column;
+    gap: 5px;
+
+    .wrapper_title {
+      text-transform: capitalize;
+      color: #eeeeee;
+    }
+
+    .wrapper_text {
+      text-transform: capitalize;
+      color: #eeeeee;
+      padding-bottom: 10px;
+    }
+
+    .wrapper_menu {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      gap: 10px;
+      padding: 0 0 10px 0;
+
+      li {
+
+        .wrapper_menu_btn {
+          cursor: pointer;
+          border: 2px solid #eeeeee;
+          color: #eeeeee;
+          background:none;
+          padding: 5px;
+          border-radius: 5px;
+          font-size: 0.9em;
+          font-weight: bolder;
+        }
+
+        :hover {
+          transform: scale(1.05);
+          transition: transform 0.5s;
+        }
+
+        button[data-current=true] {
+          color:aqua;
+          border-color: aqua;
+        }
+      }
+    }
+  }
+}

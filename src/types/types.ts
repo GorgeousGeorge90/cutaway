@@ -8,6 +8,7 @@ export type ProjectType = {
     description: string,
     stack: string[],
     link: string,
+    database: boolean,
 }
 
 export type PicsType = Pick< ProjectType, 'id' | 'pic'>

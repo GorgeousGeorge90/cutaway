@@ -4,31 +4,42 @@
 .footer_container {
   @extend %base-flex;
   height: map-get(base.$app_height, footer);
+  background-color: #181514;
+  width: 100%;
 
   .footer_content {
     @extend %base-flex;
+    flex-direction: column;
+    color:#eeeeee;
+    width: 100%;
+    gap:10px;
+
+    h3 {
+      text-transform: capitalize;
+    }
+
+    .footer_contacts {
+      display: flex;
+      gap:50px;
+    }
 
     .footer_links {
-      @extend %base-flex;
-      gap:10px;
-      text-transform: capitalize;
-      color: #eeeeee;
+      grid-column-start: 4;
+      display: grid;
+      grid-template-columns: repeat(3,40px);
+      grid-template-rows: 40px;
+      align-items: center;
+      justify-content: center;
+      gap:5px;
 
       a {
         @extend %base-flex;
+        fill: #eeeeee;
 
         :hover {
           fill: #FF8630;
-          animation: 2s pulse linear infinite;
         }
       }
     }
   }
-}
-
-@keyframes pulse {
-  0% { opacity: 1 }
-  50% { opacity: 0.7 }
-  75% { opacity: 0.5 }
-  100% { opacity: 1 }
 }
