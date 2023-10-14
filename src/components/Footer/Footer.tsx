@@ -13,7 +13,7 @@ type customType = {
 const animateLogos = {
     start: {
         opacity:0,
-        y:'150px',
+        y:'-100px',
     },
     finish:(custom:customType) => ({
         opacity: 1,
@@ -50,7 +50,8 @@ export const Footer = () => {
         viewport={{ once: true }}
         className={styles.footer_container}>
         <div className={styles.footer_content}>
-            <motion.section variants={animateLogos}
+            <motion.section
+                            variants={animateLogos}
                             custom={{delay:2}}
                             className={styles.footer_links}>
                 <CustomLink children={<GitHub/>}
