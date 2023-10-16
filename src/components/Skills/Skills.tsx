@@ -1,7 +1,5 @@
 import { useId } from 'react';
 import styles from './Skills.module.scss';
-import {ProgressBar} from "../../UI/ProgressBar";
-import {utils} from "../../utils/utils";
 import {LineProgressBar} from "../../UI/LineProgressBar";
 
 

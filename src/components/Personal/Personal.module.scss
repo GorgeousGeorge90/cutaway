@@ -58,17 +58,13 @@
       .personal_motivation_text {
         @extend %base-flex;
         flex-direction: column;
-
-        .personal_motivation_text_list {
-          list-style-type: square;
-          font-weight: bolder;
-          color:#d8dfe5;
-
-        }
       }
 
-      .personal_motivation_text + p {
-        justify-self: center;
+      .personal_motivation_text_list {
+        list-style-type: square;
+        font-weight: bolder;
+        color:#d8dfe5;
+        align-self: center;
       }
     }
   }

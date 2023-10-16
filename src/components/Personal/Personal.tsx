@@ -25,10 +25,10 @@ export const Personal = () => {
                      и развиваюсь в этом направлении!Мой базовый функционал:
                  </p>
                  <ul className={styles.personal_motivation_text_list}>
-                     <li className={styles.personal_motivation_text_list_item}>HTML&CSS/SCSS</li>
-                     <li className={styles.personal_motivation_text_list_item}>JavaScript</li>
-                     <li className={styles.personal_motivation_text_list_item}>TypeScript</li>
-                     <li className={styles.personal_motivation_text_list_item}>Redux/RTK</li>
+                     <li>HTML&CSS/SCSS</li>
+                     <li>JavaScript</li>
+                     <li>TypeScript</li>
+                     <li>Redux/RTK</li>
                  </ul>
                  <p>Я за постоянный рост и против стагнации, хочу учить что-то новое и развиваться.</p>
              </section>
