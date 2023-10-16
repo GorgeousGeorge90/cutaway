@@ -44,11 +44,6 @@
           transform: scale(1.05);
           transition: transform 0.5s;
         }
-
-        button[data-current=true] {
-          color:aqua;
-          border-color: aqua;
-        }
       }
     }
   }

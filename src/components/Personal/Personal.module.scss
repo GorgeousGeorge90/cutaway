@@ -8,7 +8,7 @@
     @extend %base-flex;
     gap:40px;
     width: 100%;
-    padding: 50px 100px 0 100px;
+    padding: 30px 100px 0 100px;
 
     .personal_logo {
       @extend %base-flex;
@@ -48,6 +48,7 @@
       align-self: start;
       flex-direction: column;
       max-width: 500px;
+      text-align: center;
 
 
       .personal_motivation_title {
@@ -63,9 +64,6 @@
           font-weight: bolder;
           color:#d8dfe5;
 
-          .personal_motivation_text_list_item {
-
-          }
         }
       }
 
@@ -91,6 +89,15 @@
   to { transform:translateY(0) }
 }
 
+
+
+@media (max-width: 830px) {
+  .personal_container .personal_content {
+    padding: 30px 20px 0 20px;
+  }
+}
+
+
 @media (max-width: 760px) {
   .personal_container .personal_content {
     flex-direction: column;
@@ -99,8 +106,18 @@
 
 
 @media (max-width: 560px) {
-  .personal_container .personal_content .personal_motivation {
-    min-width: 400px;
+  .personal_container .personal_content {
+    gap:20px;
   }
+
+  .personal_container .personal_content .personal_motivation {
+    min-width: 380px;
+    padding: 20px 20px 0 20px;
+  }
+
+  .personal_container .personal_content .personal_logo .personal_logo_img {
+      height: 300px;
+      width: 200px;
+    }
 }
 

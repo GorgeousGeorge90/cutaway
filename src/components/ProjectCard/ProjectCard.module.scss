@@ -3,13 +3,11 @@
 
 .card_container {
   @extend %base-flex;
-  padding: 5px 0;
   animation: slide;
 
   .card_content {
     @extend %base-flex;
-    gap: 20px;
-    animation: slide;
+    gap: 10px;
 
     .card_logo {
       @extend %base-flex;
@@ -39,8 +37,7 @@
         text-align: center;
         flex-direction: column;
         gap: 5px;
-        width: 400px;
-
+        max-width: 400px;
       }
 
       .card_info_stack {
@@ -79,14 +76,11 @@
   }
 }
 
-@keyframes slide {
-  0% { opacity: 0 }
-  100% { opacity: 1 }
-}
 
-@media (max-width: 760px) {
+@media (max-width: 830px) {
   .card_container .card_content {
     flex-direction: column;
+    height: 370px;
   }
 }
 
@@ -97,6 +91,10 @@
 
     .card_logo .card_logo_img {
       transform: scale(0.8);
+    }
+
+    .card_info_description {
+      max-width: 330px;
     }
   }
 }

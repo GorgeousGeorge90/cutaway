@@ -66,3 +66,19 @@
       justify-content: center;
     }
 }
+
+@media (max-width: 500px) {
+  .skills_container .skills_content {
+    gap:5px;
+  }
+
+  .skills_container .skills_content .skills_base {
+    max-width: 350px;
+    align-self: center;
+  }
+
+  .skills_container .skills_content .skills_list {
+    transform: scale(0.9);
+  }
+}
+

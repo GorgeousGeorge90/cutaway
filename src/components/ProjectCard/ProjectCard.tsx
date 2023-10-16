@@ -1,32 +1,21 @@
 import { ProjectType } from '../../types';
 import { FC } from 'react';
 import styles from './ProjectCard.module.scss';
-import { motion } from 'framer-motion';
-
-const cardAnimation = {
-    start: {
-        opacity: 0,
-    },
-    finish: {
-        opacity: 1,
-        transition: {
-            ease: "easeOut",
-            duration: 1,
-        },
-    }
-}
+import { ReactComponent as Spinner } from './../../assets/img/spinner.svg';
 
 export const ProjectCard:FC<ProjectType> =(card) => {
 
-    return (<section
-        className={styles.card_container}>
+
+    return (<section className={styles.card_container}>
         <div className={styles.card_content}>
-            <figure className={styles.card_logo}>
-                <img className={styles.card_logo_img}
-                     src={card.pic ? card.pic:''}
-                     alt='project pic'
-                />
-            </figure>
+            {
+                !card.pic ? <Spinner/>:<figure className={styles.card_logo}>
+                    <img className={styles.card_logo_img}
+                         src={card.pic ? card.pic:''}
+                         alt='project pic'
+                    />
+                </figure>
+            }
             <section className={styles.card_info}>
                 <h3 className={styles.card_info_title}>{card.name}</h3>
                 <p className={styles.card_info_description}>{card.description}</p>
