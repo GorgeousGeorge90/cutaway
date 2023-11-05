@@ -1,5 +1,10 @@
 
 
+export type PersonalType = {
+    personals:{id:number, tech:string}[],
+}
+
+
 
 export type ProjectType = {
     id: number,

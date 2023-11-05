@@ -1,5 +1,6 @@
 import styles from './Personal.module.scss';
 import avatar from './../../assets/img/ava.jpg';
+import { personal } from '../../mocks';
 
 export const Personal = () => {
 
@@ -25,10 +26,9 @@ export const Personal = () => {
                      и развиваюсь в этом направлении!Мой базовый функционал:
                  </p>
                  <ul className={styles.personal_motivation_text_list}>
-                     <li>HTML&CSS/SCSS</li>
-                     <li>JavaScript</li>
-                     <li>TypeScript</li>
-                     <li>Redux/RTK</li>
+                     { personal.map(item => <li key={item.id}>
+                         { item.tech }
+                     </li>)}
                  </ul>
                  <p>Я за постоянный рост и против стагнации, хочу учить что-то новое и развиваться.</p>
              </section>

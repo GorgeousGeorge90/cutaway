@@ -27,6 +27,7 @@ const Skills = () => {
         new BaseSkill(`react_js-${id}`,'Опыт написания React приложений, как на хуках, так и на классовых компонентах;'),
         new BaseSkill(`base_manager-${id}`,'Опыт работы с Redux и ReduxToolkit;'),
         new BaseSkill(`other-${id}`,'Базовое владение  MobX, Zustand, TanStack Query;'),
+        new BaseSkill(`vue-${id}`,'Базовый Vue 3 + Vuex;'),
         new BaseSkill(`english-${id}`,'Английский язык(B1);'),
     ]
 
@@ -36,6 +37,7 @@ const Skills = () => {
         new Skill(`js-${id}`,'JavaScript','80'),
         new Skill(`ts-${id}`,'TypeScript','70'),
         new Skill(`react-${id}`,'ReactJS','80'),
+        new Skill(`vue-${id}`,'Vue JS','50'),
     ]
 
     return (<section className={styles.skills_container}>
