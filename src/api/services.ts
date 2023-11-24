@@ -18,11 +18,13 @@ class ApiServices {
         const search = await fetch(`${this.baseUrl}search.png`)
         const todo = await fetch(`${this.baseUrl}todo.png`)
         const games = await fetch(`${this.baseUrl}games.png`)
+        const chess = await fetch(`${this.baseUrl}chess.png`)
         return [
             { id:1, pic:films.url },
             { id:2, pic:search.url },
             { id:3, pic:todo.url },
             { id:4, pic:games.url },
+            { id:5, pic:chess.url },
         ] as PicsType[]
     }
 }

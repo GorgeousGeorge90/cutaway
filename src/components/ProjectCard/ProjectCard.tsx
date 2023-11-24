@@ -4,7 +4,6 @@ import styles from './ProjectCard.module.scss';
 import { ReactComponent as Spinner } from './../../assets/img/spinner.svg';
 
 export const ProjectCard:FC<ProjectType> =(card) => {
-    console.log(card.pic)
 
 
     return (<section className={styles.card_container}>
